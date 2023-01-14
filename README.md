@@ -9,6 +9,6 @@
     title = {Doubling the cube. Solution},
     year = {2018},
     howpublished = {\url{https://github.com/DiamondSection/Doubling-the-cube-Solution_Latex}},
-    note = {commit 0de8e26}
+    note = {commit dbgsxxx}
 }
 ```

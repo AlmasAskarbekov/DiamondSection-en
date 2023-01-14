@@ -135,7 +135,7 @@ Pierre Wantzel proved in 1837 that the $\sqrt[3]{2}$ can not be constructed usin
 	\label{fig:basic}
 \end{figure}
 	
-	\item Then let's construct a right triangle $\triangle ANB$ (see fig. \ref{fig:1_anb}) where short leg $t=0.75$. \\
+	\item Then let's construct a right triangle $\triangle ANB$ (see fig. \ref{fig:1_anb}) whith an arbitrary short leg $t=0.75$ \\
 \begin{figure}[H]
 	\centerline{\includegraphics[scale=0.18]{img/1_anb.jpg}}
 	\caption{Right triangle}
@@ -148,7 +148,7 @@ s=\overline{NB}=\sqrt{a^{2}+t^{2}}=\sqrt{1^{2}+0.75^{2}}=1.25
 \\
 	\item Hence the ratio of the leg to the hypotenuse:
 \begin{equation}
-	\dfrac{a}{s}=\cos \angle ABN=\dfrac{1}{1.25}=0.8.
+	\dfrac{a}{s}=\cos \angle ABN=\dfrac{1}{1.25}=0.8
 \end{equation}
 \\
 To build this relation, let's draw a line through the points $N$ and $B$. We will get the point $O$ and the point $P$. (see fig. \ref{fig:2_second})
@@ -157,15 +157,15 @@ To build this relation, let's draw a line through the points $N$ and $B$. We wil
 	\caption{}
 	\label{fig:2_second}
 \end{figure}
-\\
-	\item Now let's construct a circle with center $B$ and radius = $BP$ (see fig. \ref{fig:anbop})\\ 
+\vfill
+	\item Now let's construct a circle with center $B$ and radius = $BP$ = $0.8$ (see fig. \ref{fig:anbop})\\ 
 \begin{figure}[h]
 	\centerline{\includegraphics[scale=0.15]{img/anbop.jpg}}
 	\caption{}
 	\label{fig:anbop}
 \end{figure}
 \newpage
-	\item Then we construct a ray from the point $C(2,0)$ through the point $Q$ which is the intersection of the circle and the segment $\overline{BG}$. (see fig. \ref{fig:anbopq}).
+	\item Then we construct a ray from the point $C(2,0)$ through the point $Q$ which is the intersection of the circle with center $B$ and the segment $\overline{BG}$. (see fig. \ref{fig:anbopq}).
 \begin{figure}[h]
 	\centerline{\includegraphics[scale=0.15]{img/anbopQ.png}}
 	\caption{}
@@ -179,7 +179,7 @@ To build this relation, let's draw a line through the points $N$ and $B$. We wil
 \end{figure}\\
 	Segment $BR$ is a bisector of a $\triangle$ $BQC$  (see fig. \ref{fig:bqc})
 \newpage
-Now we have a $\triangle$ $BQC$ где $BQ=BP=\dfrac{a}{s}=\cos \angle ABN$.
+Now we have a $\triangle$ $BQC$ where $BQ=BP=\dfrac{a}{s}=\cos \angle ABN$.
 \begin{figure}[H]
 		\centerline{\includegraphics[scale=0.15]{img/BQC.png}}
 		\caption{Triangle $BQC$}
@@ -200,21 +200,31 @@ f=\frac{2\times0.8}{1+0.8}\times\frac{\sqrt{3}}{2}\approx 0.769800358919501
 	\label{circle}
 \end{figure} 	
 \newpage
-	\item Then again we build a right triangle $\triangle BDC$ as shown in the fig. \ref{fig:bdc}.
+	\item Now we have constructed a right triangle $\triangle BDC$ as shown in the fig. \ref{fig:bdc}. 
 \begin{figure}[h]
 	\centerline{\includegraphics[scale=0.14]{img/BDC.png}}
 	\caption{}
 	\label{fig:bdc}
 \end{figure}\\
-So we got a right triangle $\triangle BDC$. Accordingly, we then repeat the steps:
-\subitem build the cosine value
-\subitem we build a triangle with an angle of 60 degrees
-\subitem find the bisector
-\subitem build a right triangle
-\subitem and repeat from start...\\
-Repeating these constructions, through the n-th construction we get $\sqrt[3]{2}$ as the length of the hypotenuse of a right triangle. Thus, the length of the hypotenuse calculated from the given sequence tends to $\sqrt[3]{2}$.
+So we have constructed the right triangle $\triangle BDC$.
+\\
+Now we need to repeat the following steps from the 3-rd step above:
+\subitem calculate cosine value (step 3)
+\subitem construct a circle (step 4)
+\subitem construct a triangle with an angle of 60 degrees (step 5)
+\subitem calculate the length of the bisector of the previously constructed triangle. (step 6)
+\subitem construct the right triangle with shortest leg equal to the bisector from the previous step (step 7)
+\subitem and repeat again from step 3
+\subitem and so on...\\
+\vspace{10mm}
+\par
+\textbf{\large {Conjecture:}}
+\par
+
+\textbf{Repeating these constructions, after the nth iteration, the hypotenuse ${DC}$ of $\triangle BDC$ tends to $\sqrt[3]{2}$ as the limit of recurrent sequence.}
+
 \newpage
-\section{Definition and proof}
+\section{Proof}
 From the above constructions, we obtain a recurrent sequence:
 \begin{equation}
 ( a_{1} > 0,  n \in \mathbb N ) \ \underset{n\to \infty }{lim} a_{n+1} = \dfrac{ 1 }{ \sqrt{ 1 + \left( \dfrac{ 2 a_{ n } }{ 1 + a_{ n } } \dfrac{ \sqrt{ 3 } }{ 2 } \right)^{2} } } =\dfrac{ 1 }{ \sqrt[3]{ 2 } }
@@ -230,7 +240,7 @@ b_{1}>0, \hspace{5pt} b_{n+1}=\dfrac{1}{\sqrt{1+b_{n}^{2}}},\ \hspace{5pt} b_{n+
 Where $b_{n+1}$ is the cosine of the right triangle $\triangle CBD$ (see fig. \ref{fig:bdc}), \newline then $b_{n+2}=\dfrac{2\times b_{n+1}}{1+b_{n+1}}\times\dfrac{\sqrt{3}}{2}$ is the bisector $\overline{BR}$ of the triangle $\triangle BQC$ of the angle $\angle CBQ$ 60-degree, where the shortest leg $BQ$  is $ b_{n+1} $ 
 
 
-\end{enumerate}.
+\end{enumerate}
 Let's expand and simplify this:
 \[
 a_{n+1} =\dfrac{ 1 }{ \sqrt{ 1 + \left( \dfrac{ 2 a_{ n } }{ 1 + a_{ n } }\dfrac{ \sqrt{ 3 } }{ 2 }\right)^{ 2 } } }
@@ -268,7 +278,7 @@ a_{ n + 1 }=\dfrac{ a_{ n } + 1 }{ \sqrt{ 4 a_{ n }^{ 2 } + 2 a_{ n } + 1} }
 \]
 Now let's evaluate the limit of the sequence defined by: 
 \begin{equation}\label{lim-def1}
-(0 < a_{ 1 } < 1, n \in \mathbb N), \label{lim} 
+(0 < a_{ 1 } < 1, n \in \mathbb N),
 \underset{ n \to \infty }{lim} a_{ n+1 }=\dfrac{ a_{ n } + 1 }{ \sqrt{4 a_{ n }^{2} + 2 a_{n} + 1 } }
 \end{equation}
 \\
@@ -302,7 +312,7 @@ a_{k + 2}=\dfrac{ a_{ k+1 } + 1 }{ \sqrt{ 4 a_{ k+1 }^{ 2 } + 2 a_{ k+1 } + 1} }
 hence: \[ a_{k+2} \approx 0.801671 < 1 \]
 So it is easy to see that $\{a_{k}\} < 1$ when $ a_{1} \le 1$.
 \\
-Therefore the sequence (\ref{lim-def1}) is bounded above by $1$.
+Therefore the sequence (1.8) is bounded above by $1$.
 \\
 Also ${\{a_{n}\}}$ is bounded below since $a_{1} > 0 $.
 
@@ -398,7 +408,7 @@ Notice that the physical world is limited in its minimum values by the Planck le
 which means that all values less than the Planck length have no physical meaning. In order to reach the maximum possible value limited by the Planck length we need to perform the above constructions 57 times.
 \\
 \par
-Now we know for sure that it is possible to construct $\sqrt[3]{2}$ using only a compass and straightedge, and therefore the cube doubling problem is solved. 
+Indeed we find a way to construct $\sqrt[3]{2}$ using only a compass and straightedge. 
 \\
 \par 
 Most importantly, we discovered a new fundamental property of an equilateral triangle that is directly related to the cube root of two.
